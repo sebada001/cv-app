@@ -1,0 +1,83 @@
+body{
+  background-color: whitesmoke;
+  color: whitesmoke;
+  font-family: 'Franklin Gothic Medium', 'Arial', Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.app{
+  height: 100vh;
+  width: 100%;
+}
+.app>div{
+  width: 600px;
+  margin: 0 auto;
+  background-color: rgb(40, 48, 61);
+}
+.name{
+  background-color: rgb(57, 98, 114) !important;
+  padding: 2rem !important;
+}
+.personal-info>*,
+.education-info>*,
+.work-info>*{
+  padding: 0rem 2rem;
+}
+.personal-info-group, 
+.work-info-group{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+.personal-info-group>div, 
+.work-info-group>div{
+  max-width: 200px;
+}
+.education-info{
+  background-color: rgb(57, 98, 114) !important;
+}
+.education-title-area,
+.work-title-area{
+  display: flex;
+}
+
+.education-title-area>img,
+.work-title-area>img{
+  height: 30px;
+  width: 30px;
+  align-self: center;
+  margin-right: 1rem;
+  margin-bottom: 5px;
+  filter:invert(100%)
+}
+.education-content,
+.work-content{
+  display: flex;
+  flex-direction: column;
+}
+.education-content>div,
+.work-content>div{
+  display: grid;
+  grid-template-columns: 1fr 7fr;
+}
+.education-year-column,
+.work-year-column{
+  margin-right: 1rem;
+}
+.education-info-column>h4,
+.work-info-column>h4{
+  margin-top: 0;
+}
+.screenshot{
+  background-color: rgb(40, 48, 61);
+  font-weight: bold;
+  color:whitesmoke;
+  border: none;
+  border: 4px solid rgb(57, 98, 114);
+  border-radius: 4px;
+  position: absolute;
+  top: 50px;
+  left: 200px;
+  width: 300px;
+  height: 50px;
+}
