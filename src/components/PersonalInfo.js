@@ -5,20 +5,26 @@ class PersonalInfo extends Component {
     super(props);
   }
   render() {
-    const { toInsert, personalInfo, editText } = this.props;
+    const { personalInfo, editText, handlePersonalInfo } = this.props;
     return (
       <div className="personal-info">
         <h1
           className="name"
-          onMouseEnter={(e) => editText(e, "personalInfo", 0)}
-          onMouseLeave={(e) => editText(e, "personalInfo", 0)}
+          onMouseEnter={(e) => editText(e)}
+          onMouseLeave={(e) => {
+            editText(e);
+            handlePersonalInfo(e, 0);
+          }}
         >
           {personalInfo[0]}
         </h1>
         <h2
           className="job-title"
-          onMouseEnter={(e) => editText(e, "personalInfo", 1)}
-          onMouseLeave={(e) => editText(e, "personalInfo", 1)}
+          onMouseEnter={(e) => editText(e)}
+          onMouseLeave={(e) => {
+            editText(e);
+            handlePersonalInfo(e, 1);
+          }}
         >
           {personalInfo[1]}
         </h2>
@@ -26,8 +32,11 @@ class PersonalInfo extends Component {
           <div className="address">
             <strong>Adress</strong>
             <p
-              onMouseEnter={(e) => editText(e, "personalInfo", 2)}
-              onMouseLeave={(e) => editText(e, "personalInfo", 2)}
+              onMouseEnter={(e) => editText(e)}
+              onMouseLeave={(e) => {
+                editText(e);
+                handlePersonalInfo(e, 2);
+              }}
             >
               {personalInfo[2]}
             </p>
@@ -36,8 +45,11 @@ class PersonalInfo extends Component {
             <strong>LinkedIn</strong>
             <p>
               <a
-                onMouseEnter={(e) => editText(e, "personalInfo", 3)}
-                onMouseLeave={(e) => editText(e, "personalInfo", 3)}
+                onMouseEnter={(e) => editText(e)}
+                onMouseLeave={(e) => {
+                  editText(e);
+                  handlePersonalInfo(e, 3);
+                }}
               >
                 {personalInfo[3]}
               </a>
@@ -46,8 +58,11 @@ class PersonalInfo extends Component {
           <div className="phone">
             <strong>Phone</strong>
             <p
-              onMouseEnter={(e) => editText(e, "personalInfo", 4)}
-              onMouseLeave={(e) => editText(e, "personalInfo", 4)}
+              onMouseEnter={(e) => editText(e)}
+              onMouseLeave={(e) => {
+                editText(e);
+                handlePersonalInfo(e, 4);
+              }}
             >
               {personalInfo[4]}
             </p>
@@ -55,8 +70,11 @@ class PersonalInfo extends Component {
           <div className="email">
             <strong>E-mail</strong>
             <p
-              onMouseEnter={(e) => editText(e, "personalInfo", 5)}
-              onMouseLeave={(e) => editText(e, "personalInfo", 5)}
+              onMouseEnter={(e) => editText(e)}
+              onMouseLeave={(e) => {
+                editText(e);
+                handlePersonalInfo(e, 5);
+              }}
             >
               {personalInfo[5]}
             </p>
